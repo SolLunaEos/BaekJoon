@@ -1,0 +1,58 @@
+#include<stdio.h>
+int main()
+{
+	int n,k=0,i,j,sum=0;
+	scanf("%d",&n);
+
+	if(n%5==0)
+	{
+		n=n/5;
+		printf("%d",n);
+	}
+	
+	else if(n%5==3)
+	{
+		sum=n/5;
+		k=sum/3;
+		printf("%d",sum+k);
+	}
+	
+	else if(n%3==0 && n%5!=0)
+	{
+		printf("%d",n/3);
+	}
+	
+	else if(n%5!=0 && n%5!=3)
+	{
+		
+		for(i=n/5; ; i--)
+		{
+			if(n==4)
+			{
+				break;
+			}
+		{
+			k=5*i;
+			sum=n-k;
+			if(sum%3==0)
+			{
+				break;
+			}
+		}
+		
+		
+			printf("%d",sum/3+i);
+		}
+	}
+
+	
+	else
+	{
+		printf("-1");
+	}
+	
+
+	
+	
+	
+}
