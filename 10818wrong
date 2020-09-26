@@ -1,0 +1,32 @@
+#include<stdio.h>
+int num[1000000];
+int main()
+{
+	int n,i,j,high=0,low=0;
+	scanf("%d", &n);
+	
+	for(i=0; i<n; i++)
+	{
+		scanf("%d", &num[i]);
+	}
+	
+	for(i=0; i<n; i++)
+	{
+		if(high<num[i])
+		{
+			high = num[i];
+		}
+	}
+	
+	low = num[0];
+	
+	for(j=1; j<n; j++)
+	{
+		if(low > num[j])
+		{
+			low=num[j];
+		}
+	}
+	
+	printf("%d %d",low,high);
+}
