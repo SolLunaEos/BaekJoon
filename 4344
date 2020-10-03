@@ -25,7 +25,7 @@ int main()
 				plus++;
 			}
 		}
-		printf("%.3lf\n",plus/n*100);
+		printf("%.3lf%%\n",plus/n*100);
 		plus=0;
 		sum=0;
 		avg=0;
